@@ -70,7 +70,7 @@ imageButtons.forEach((button) => {
 			computerScore = 0;
 			reset = 0;
 		}
-		console.log(playRound(button.dataset.image, computerPlay()));
+		playRound(button.dataset.image, computerPlay());
 		div_playerScore.textContent = playerScore.toString();
 		div_computerScore.textContent = computerScore.toString();
 		if (playerScore === 5) {
