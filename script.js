@@ -58,13 +58,13 @@ let message = document.querySelector(".message");
 const imageButtons = Array.from(document.querySelectorAll(".player-button"));
 
 imageButtons.forEach((button) => {
-	button.addEventListener('click', () => {
-		button.addEventListener('mouseenter', () => {
-			button.classList.add('animation');
-		});
-		button.addEventListener('mouseleave', () => {
-			button.classList.remove('animation');
-		});
+	button.addEventListener('mouseenter', () => {
+		button.classList.add('animation');
+	});
+	button.addEventListener('mouseleave', () => {
+		button.classList.remove('animation');
+	});
+	button.addEventListener('click', () => {	
 		if (reset === 1) {
 			playerScore = 0;
 			computerScore = 0;
