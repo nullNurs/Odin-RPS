@@ -59,6 +59,12 @@ const imageButtons = Array.from(document.querySelectorAll(".player-button"));
 
 imageButtons.forEach((button) => {
 	button.addEventListener('click', () => {
+		button.addEventListener('mouseenter', () => {
+			button.classList.add('animation');
+		});
+		button.addEventListener('mouseleave', () => {
+			button.classList.remove('animation');
+		});
 		if (reset === 1) {
 			playerScore = 0;
 			computerScore = 0;
@@ -75,11 +81,5 @@ imageButtons.forEach((button) => {
 			message.textContent = "Computer Wins! Try again?";
 			reset = 1;
 		}
-	});
-	button.addEventListener('mouseenter', () => {
-		button.classList.add('animation');
-	});
-	button.addEventListener('mouseleave', () => {
-		button.classList.remove('animation');
 	});
 });
