@@ -1,3 +1,4 @@
+// computer returns rock paper or scissors based on a random number
 function computerPlay() {
 	num = Math.floor(Math.random() * 3);
 	// expected output: 0, 1 or 2
@@ -10,10 +11,9 @@ function computerPlay() {
 			return "SCISSORS";
 	}
 }
-
+// game logic for a round of rock paper scissors
 function playRound(playerSelection, computerSelection) {
 	playerSelection = playerSelection.toUpperCase();
-	// game logic
 	if ((playerSelection === "ROCK") && (computerSelection === "ROCK")) {
 		message.textContent = "Tie! Rock vs Rock.";
 	}
@@ -57,6 +57,7 @@ let div_computerScore = document.querySelector(".computer-score");
 let message = document.querySelector(".message");
 const imageButtons = Array.from(document.querySelectorAll(".player-button"));
 
+// main game loop with event listeners
 imageButtons.forEach((button) => {
 	button.addEventListener('mouseenter', () => {
 		button.classList.add('animation');
